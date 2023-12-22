@@ -1,0 +1,84 @@
+/* 1646FF - синий */
+/* FAF9FA - белый */
+/* 1573FF - синий светлый */
+/* FF7939 - оранжевый */
+/* A939FF - фиолетовый */
+/* CDB9FF - светло фиолетовый */
+/* EEFDB4 - лимонный светлый */
+/* FFC4DC - розовый */
+/* 33F981 - салатовый */
+/* 9D9DFF - сине-серый */
+/* E5FB6D - лимонный яркий */
+/* FE394E - малиновый */
+/* e6f0f0 - оливковый */
+/* 14141E - черный */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root {
+    /* background: #e6f0f0; */
+    color: #14141E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.App {
+    max-width: 800px;
+}
+.post {
+    display: flex;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.post__btns {
+    display: flex;
+    flex-direction: column;
+}
+.post-enter {
+    transform: translateX(-350px);
+}
+.post-enter-active {
+    transform: translateX(0);
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
+}
+.page__wrapper {
+    margin-top: 30px;
+    display: flex;
+}
+.page {
+    padding: 10px;
+    border: 1px solid teal;
+    cursor: pointer;
+}
+.page__current {
+    border: 2px solid teal;
+    background: teal;
+    color: white;
+    font-weight: bold;
+}
+.navbar {
+    background: teal;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.navbar__links {
+    margin-left: auto;
+}

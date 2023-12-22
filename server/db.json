@@ -16,9 +16,19 @@
       "id": 3
     },
     {
-      "title": "New Post",
+      "title": "Updated",
       "body": "New Post",
       "id": 4
+    },
+    {
+      "title": "New Post",
+      "body": "New Post",
+      "id": 5
+    },
+    {
+      "title": "New Post",
+      "body": "New Post",
+      "id": 6
     }
   ]
 }
