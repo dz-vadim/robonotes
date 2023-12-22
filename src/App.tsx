@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {ReactNode, useCallback, useEffect} from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faBrain,faLightbulb, faThumbtack, faPen, faArchive, faTrash} from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import NoteToolBar from "./components/UI/NoteToolBar/NoteToolBar";
+import {useAppDispatch, useAppSelector} from "./hooks/redux";
+import {userSlice} from "./store/reducers/UserSlice";
+import {fetchUsers} from "./store/reducers/ActionCreators";
+import PostContainer from "./components/PostContainer";
+import {postAPI} from "./servises/PostServise";
+// library.add( faCheckSquare, faCoffee)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div>
+
+            <PostContainer/>
+        </div>
+    );
+};
 
 export default App;
