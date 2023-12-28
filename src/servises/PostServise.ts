@@ -1,16 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {IPost} from "../models/IPost";
 
-export const initialPosts = [
-    { id: 1, title: 'Initial Post 1', body: 'This is the initial content of post 1' },
-    { id: 2, title: 'Initial Post 2', body: 'This is the initial content of post 2' },
-    { id: 3, title: 'Initial Post 2', body: 'This is the initial content of post 2' },
-    { id: 4, title: 'Initial Post 2', body: 'This is the initial content of post 2' },
-    { id: 5, title: 'Initial Post 2', body: 'This is the initial content of post 2' },
-    { id: 6, title: 'Initial Post 2', body: 'This is the initial content of post 2' },
-    { id: 7, title: 'Initial Post 2', body: 'This is the initial content of post 2' },
-];
-
 export const postAPI = createApi({
 
     tagTypes: ['Post'],

@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "title": "Updated",
+      "title": "New Post",
       "body": "New Post",
       "id": 1
     },
@@ -9,26 +9,98 @@
       "title": "New Post",
       "body": "New Post",
       "id": 2
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "name": "Купити молоко",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Молоко",
+      "dates": "2023-12-28, 2023-12-29",
+      "status": "active"
     },
     {
-      "title": "Updated",
-      "body": "New Post",
-      "id": 3
+      "id": 2,
+      "name": "Відвідати лікаря",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Консультація терапевта",
+      "dates": "2023-12-29, 2023-12-30",
+      "status": "active"
     },
     {
-      "title": "Updated",
-      "body": "New Post",
-      "id": 4
+      "id": 3,
+      "name": "Зробити уроки",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Математика, хімія, українська мова",
+      "dates": "2023-12-28, 2023-12-29",
+      "status": "active"
     },
     {
-      "title": "New Post",
-      "body": "New Post",
-      "id": 5
+      "id": 4,
+      "name": "Прибратися в квартирі",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Покласти речі на місце, помити посуд, винести сміття",
+      "dates": "2023-12-28, 2023-12-29",
+      "status": "active"
     },
     {
-      "title": "New Post",
-      "body": "New Post",
-      "id": 6
+      "id": 5,
+      "name": "Зробити покупки на тиждень",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Хліб, овочі, фрукти, м'ясо, молочні продукти",
+      "dates": "2023-12-28, 2023-12-29",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "name": "Зустрітися з друзями",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Кава в кафе",
+      "dates": "2023-12-29, 2023-12-30",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "name": "Сходити в кіно",
+      "createdDate": "December 28, 2023",
+      "category": "Task",
+      "content": "Новий фільм про супергероїв",
+      "dates": "2023-12-30",
+      "status": "active"
+    },
+    {
+      "id": 34,
+      "name": "Зробити покупки на тиждень",
+      "createdDate": "2023-12-27T19:03:00+02:00",
+      "category": "Task",
+      "content": "Хліб, овочі, фрукти, м'ясо, молочні продукти",
+      "dates": "2023-12-28, 2023-12-29",
+      "status": "complete"
+    },
+    {
+      "id": 54,
+      "name": "Зустрітися з друзями",
+      "createdDate": "2023-12-27T19:04:00+02:00",
+      "category": "Task",
+      "content": "Кава в кафе",
+      "dates": "2023-12-29, 2023-12-30",
+      "status": "complete"
+    },
+    {
+      "id": 65,
+      "name": "Сходити в кіно",
+      "createdDate": "2023-12-27T19:05:00+02:00",
+      "category": "Task",
+      "content": "Новий фільм про супергероїв",
+      "dates": "2023-12-30",
+      "status": "complete"
     }
   ]
 }

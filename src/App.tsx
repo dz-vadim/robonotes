@@ -11,11 +11,12 @@ import {postAPI} from "./servises/PostServise";
 // library.add( faCheckSquare, faCoffee)
 import "./styles/App.css";
 import MyModal from "./components/MyModal/MyModal";
+import TodoContainer from "./components/TodoContainer";
 
 const App = () => {
     return (
         <div>
-            <PostContainer/>
+            <TodoContainer/>
         </div>
     );
 };

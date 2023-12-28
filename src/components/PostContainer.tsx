@@ -1,5 +1,5 @@
 import React, {FC, useCallback, useEffect, useState} from 'react';
-import {initialPosts, postAPI} from "../servises/PostServise";
+import {postAPI} from "../servises/PostServise";
 import PostItem from "./PostItem";
 import {IPost} from "../models/IPost";
 import MyModal from "./MyModal/MyModal";
