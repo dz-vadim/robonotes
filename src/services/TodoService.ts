@@ -1,6 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {ITodo} from "../models/ITodo";
-
+const settings = {
+    "url": "https://robonotes-5f3c.restdb.io/rest/todos",
+}
+const headers = {
+    "content-type": "application/json",
+    "x-apikey": "658ee86457af42c3d6bbc9ff",
+    "cache-control": "no-cache"
+}
 export const todoAPI = createApi({
 
     tagTypes: ['Todo'],

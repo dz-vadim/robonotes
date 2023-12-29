@@ -7,7 +7,7 @@ import {useAppDispatch, useAppSelector} from "./hooks/redux";
 import {userSlice} from "./store/reducers/UserSlice";
 import {fetchUsers} from "./store/reducers/ActionCreators";
 import PostContainer from "./components/PostContainer";
-import {postAPI} from "./servises/PostServise";
+import {postAPI} from "./services/PostServise";
 // library.add( faCheckSquare, faCoffee)
 import "./styles/App.css";
 import MyModal from "./components/MyModal/MyModal";

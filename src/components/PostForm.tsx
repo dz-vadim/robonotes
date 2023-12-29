@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import MyButton from "./UI/button/MyButton";
 import MyInput from "./UI/input/MyInput";
 import {IPost} from "../models/IPost";
-import {postAPI} from "../servises/PostServise";
+import {postAPI} from "../services/PostServise";
 
 interface Post {
     id: number;

@@ -1,6 +1,6 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {postAPI} from "../servises/PostServise";
-import {todoAPI} from "../servises/TodoServise";
+import {postAPI} from "../services/PostServise";
+import {todoAPI} from "../services/TodoService";
 
 const rootReducer = combineReducers({
     [postAPI.reducerPath]: postAPI.reducer,
@@ -13,8 +13,6 @@ export const setupStore = () => {
         middleware: getDefaultMiddleware =>
             getDefaultMiddleware().concat(todoAPI.middleware)
                 .concat(postAPI.middleware)
-
-
     })
 }
 

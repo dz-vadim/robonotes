@@ -1,5 +1,5 @@
 import React, {FC, useCallback, useEffect, useState} from 'react';
-import {todoAPI} from "../servises/TodoServise";
+import {todoAPI} from "../services/TodoService";
 import TodoItem from "./TodoItem";
 import {ITodo} from "../models/ITodo";
 import MyModal from "./MyModal/MyModal";
@@ -13,7 +13,7 @@ const TodoContainer: FC = () => {
     const [modal, setModal] = useState(false);
 
     const [selectedStatus, setSelectedStatus] = useState("active");
-    const handleStatusChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const handleSelectStatus = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedStatus(event.target.value);
     };
     const handleUpdate = (todo: ITodo) => {
@@ -21,6 +21,9 @@ const TodoContainer: FC = () => {
     }
     const handleRemove = (todo: ITodo) => {
         deleteTodo(todo);
+    }
+    const handleChangeStatus = (todo: ITodo) => {
+        updateTodo(todo);
     }
 
     return (
@@ -32,7 +35,7 @@ const TodoContainer: FC = () => {
             <MyModal visible={modal} setVisible={setModal}>
                 <TodoForm/>
             </MyModal>
-            <select name="" id="" onChange={handleStatusChange}>
+            <select name="" id="" onChange={handleSelectStatus}>
                 <optgroup label="Tasks">
                     <option value="active">Active</option>
                     <option value="complete">Complete</option>
@@ -48,6 +51,7 @@ const TodoContainer: FC = () => {
                             key={todo.id}
                                 todo={todo}
                                 update={handleUpdate}
+                                changeStatus={handleChangeStatus}
                                 remove={handleRemove}
                             />)
                         }

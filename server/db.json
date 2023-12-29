@@ -1,24 +1,12 @@
 {
-  "posts": [
-    {
-      "title": "New Post",
-      "body": "New Post",
-      "id": 1
-    },
-    {
-      "title": "New Post",
-      "body": "New Post",
-      "id": 2
-    }
-  ],
   "todos": [
     {
       "id": 1,
       "name": "Купити молоко",
       "createdDate": "December 28, 2023",
-      "category": "Task",
+      "category": "Random thought",
       "content": "Молоко",
-      "dates": "2023-12-28, 2023-12-29",
+      "dates": "",
       "status": "active"
     },
     {
@@ -27,7 +15,7 @@
       "createdDate": "December 28, 2023",
       "category": "Task",
       "content": "Консультація терапевта",
-      "dates": "2023-12-29, 2023-12-30",
+      "dates": "",
       "status": "active"
     },
     {
@@ -36,7 +24,7 @@
       "createdDate": "December 28, 2023",
       "category": "Task",
       "content": "Математика, хімія, українська мова",
-      "dates": "2023-12-28, 2023-12-29",
+      "dates": "",
       "status": "active"
     },
     {
@@ -46,15 +34,15 @@
       "category": "Task",
       "content": "Покласти речі на місце, помити посуд, винести сміття",
       "dates": "2023-12-28, 2023-12-29",
-      "status": "active"
+      "status": "complete"
     },
     {
       "id": 5,
       "name": "Зробити покупки на тиждень",
       "createdDate": "December 28, 2023",
-      "category": "Task",
+      "category": "Idea",
       "content": "Хліб, овочі, фрукти, м'ясо, молочні продукти",
-      "dates": "2023-12-28, 2023-12-29",
+      "dates": "",
       "status": "active"
     },
     {
@@ -63,16 +51,16 @@
       "createdDate": "December 28, 2023",
       "category": "Task",
       "content": "Кава в кафе",
-      "dates": "2023-12-29, 2023-12-30",
+      "dates": "",
       "status": "active"
     },
     {
       "id": 7,
       "name": "Сходити в кіно",
       "createdDate": "December 28, 2023",
-      "category": "Task",
-      "content": "Новий фільм про супергероїв",
-      "dates": "2023-12-30",
+      "category": "Random thought",
+      "content": "Новий фільм про супергероїв 12/30/2023",
+      "dates": "12/30/2023",
       "status": "active"
     },
     {
@@ -94,13 +82,13 @@
       "status": "complete"
     },
     {
-      "id": 65,
-      "name": "Сходити в кіно",
-      "createdDate": "2023-12-27T19:05:00+02:00",
-      "category": "Task",
-      "content": "Новий фільм про супергероїв",
-      "dates": "2023-12-30",
-      "status": "complete"
+      "name": "Випити каву",
+      "createdDate": "December 29, 2023",
+      "category": "Random thought",
+      "content": "Уже 9 чашка",
+      "dates": "12/29/2023",
+      "status": "active",
+      "id": 67
     }
   ]
 }

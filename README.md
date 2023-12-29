@@ -1,47 +1,92 @@
-# Getting Started with Create React App
+# React Redux TypeScript Note App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Note App built using React.js, Redux (or Redux Toolkit), and TypeScript.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Add, Edit, and Remove Notes:**
+    - Users can create new notes, edit existing ones, and remove notes.
 
-### `npm start`
-### `json-server --watch server/db.json --port 5000`
+2. **Display Notes in Table:**
+    - Notes are displayed in a table format.
+    - Columns: Time of creation, Note's content, Note's category, Dates mentioned.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. **Note Categories:**
+    - Categories include "Task", "Random thought", and "Idea".
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. **Archiving Notes:**
+    - Users can archive notes, and archived notes are not shown in the main notes list.
+    - Users can view archived notes and unarchive them.
 
-### `npm test`
+5. **Summary Table:**
+    - Display a summary table counting notes by categories for both active and archived notes.
+    - The summary table is updated dynamically.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. **Redux Store:**
+    - Data is stored in the Redux store.
+    - Initial state is prepopulated with 7 notes.
 
-### `npm run build`
+7. **Bonus Tasks:**
+    - Creation and editing of notes work through a custom modal component.
+    - `///TODO`: Tables for "List of Notes" and "Summary" use the same table component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/dz-vadim/robonote.git
+   ```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   cd robonote
+   npm install
+   ```
+3. Start json-server:
+ 
+   ```bash
+   json-server --watch server/db.json --port 5000
+   ```
+   _json-server was started to 5000 port. Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+If you want to replace json-server to real DB server, change `baseUrl` in TodoService.ts_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Run the app:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+   The app will be available at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project structure follows a standard React-Redux TypeScript setup:
+
+- `src/components`: React components.
+- `src/store`: Redux-related files, including actions, reducers, and store configuration.
+- `src/dev`: [React Buddy](./src/dev/README.md) plugin.
+- `src/hooks`: Typed App Hooks.
+- `src/models`: TypeScript types/interfaces.
+- `src/services`: Redux toolkit Query.
+- `src/App.tsx`: Main application component.
+- `src/index.tsx`: Entry point of the application.
+
+## Screenshots
+
+![Note App](screenshots/note-app.png)
+
+## Dependencies
+
+- React.js
+- Redux (or Redux Toolkit)
+- TypeScript
+- React-Redux
+- React-Router
+- Other dependencies as needed
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.MD) file for details.
