@@ -1,21 +1,12 @@
-.myBtn
-{
+.mySelect {
     padding: 5px 15px;
     color: dodgerblue;
     font-size: 14px;
     background: transparent;
     border: 1px solid dodgerblue;
     cursor: pointer;
-    border-radius: 1rem;
-}
-.deleteBtn {
-    background: transparent;
-    color: teal;
-    padding: 5px;
-    border: 2px solid red;
     border-radius: 0.5rem;
 }
-.myBtn:hover {
+.mySelect:hover {
     background: aliceblue;
 }
-

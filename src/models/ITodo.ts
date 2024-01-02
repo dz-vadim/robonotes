@@ -7,3 +7,9 @@ export interface ITodo {
     dates: string;
     status: string;
 }
+
+export enum iconTypes {
+    Task = "Task",
+    Random_thought = "Random thought",
+    Idea = "Idea",
+}

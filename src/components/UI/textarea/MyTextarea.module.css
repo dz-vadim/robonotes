@@ -1,13 +1,16 @@
-.myInput {
+.myTextarea {
     width: 100%;
     padding: 5px 15px;
     margin: 5px 0;
     border: 1px solid dodgerblue;
     border-radius: 5px;
+    height: 8rem;
+    resize: none;
+}
+.large {
+    height: 2rem;
+}
 
-}
-.myInput::placeholder {
+::placeholder {
     color: dodgerblue;
-}
-.myInput:focus {
 }

@@ -49,7 +49,7 @@ This is a simple Note App built using React.js, Redux (or Redux Toolkit), and Ty
    ```bash
    json-server --watch server/db.json --port 5000
    ```
-   _json-server was started to 5000 port. Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
+   _json-server was started to 5000 port. Open [http://localhost:5000/todos](http://localhost:5000/todos) to view todos resources it in the browser.
 If you want to replace json-server to real DB server, change `baseUrl` in TodoService.ts_
 
 

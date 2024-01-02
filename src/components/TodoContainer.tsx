@@ -1,64 +1,71 @@
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import React, {FC, useState} from 'react';
 import {todoAPI} from "../services/TodoService";
 import TodoItem from "./TodoItem";
-import {ITodo} from "../models/ITodo";
 import MyModal from "./MyModal/MyModal";
-import TodoForm from "./TodoForm";
+import TodoForm from "./TodoForm/TodoForm";
+import Loader from "./Loader/Loader";
+import MyButton from "./UI/button/MyButton";
+import MySelect from "./UI/select/MySelect";
+import SummaryTable from "./SummaryTable";
 
 const TodoContainer: FC = () => {
     const countOfParameters = 0;
     const {data: todos, error, isLoading} = todoAPI.useFetchAllTodosQuery(countOfParameters)
-    const [updateTodo, {}] = todoAPI.useUpdateTodoMutation()
-    const [deleteTodo, {}] = todoAPI.useDeleteTodoMutation()
     const [modal, setModal] = useState(false);
 
     const [selectedStatus, setSelectedStatus] = useState("active");
+    const [title, setTitle] = useState("");
     const handleSelectStatus = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedStatus(event.target.value);
+        setTitle(event.target.value)
     };
-    const handleUpdate = (todo: ITodo) => {
-        updateTodo(todo);
-    }
-    const handleRemove = (todo: ITodo) => {
-        deleteTodo(todo);
-    }
-    const handleChangeStatus = (todo: ITodo) => {
-        updateTodo(todo);
-    }
-
     return (
         <div>
-
-            <button onClick={() => setModal(true)} style={{marginTop: "30px"}}>
-                New Todo
-            </button>
-            <MyModal visible={modal} setVisible={setModal}>
-                <TodoForm/>
-            </MyModal>
-            <select name="" id="" onChange={handleSelectStatus}>
-                <optgroup label="Tasks">
-                    <option value="active">Active</option>
-                    <option value="complete">Complete</option>
-                </optgroup>
-            </select>
-            <h1>Active tasks</h1>
-            <div className="todo__list">
-                {isLoading && <h1>Loading...</h1>}
-                {error && <h1>{JSON.stringify(error, null, 2)}</h1>}
-                {todos && todos.map(todo => {
-                    if (todo.status === selectedStatus) {
-                        return (<TodoItem
-                            key={todo.id}
-                                todo={todo}
-                                update={handleUpdate}
-                                changeStatus={handleChangeStatus}
-                                remove={handleRemove}
-                            />)
-                        }
-
-                    }
-                )}
+            <div className="menu">
+                <MyButton onClick={() => setModal(true)}>
+                    Add Note
+                </MyButton>
+                <MySelect name="" id="" onChange={handleSelectStatus}>
+                    <optgroup label="Tasks">
+                        <option value="active">Active</option>
+                        <option value="complete">Complete</option>
+                    </optgroup>
+                </MySelect>
             </div>
+            <MyModal visible={modal} setVisible={setModal}>
+                <TodoForm modal={modal}/>
+            </MyModal>
+            <div className="todo__list">
+                {isLoading && <Loader/>}
+                {error && <h1 className={"error"}>{JSON.stringify(error, null, 2)}</h1>}
+                {todos && <h1 className={"containerTitle"}>{(title + " tasks").toUpperCase()}</h1>}
+                {todos &&
+                    <table>
+                        <thead className="todo__headers">
+                        <tr>
+                            <th className="TodoIcon"></th>
+                            <th className="Name">Name</th>
+                            <th className="Created">Created</th>
+                            <th className="Category">Category</th>
+                            <th className="Content">Content</th>
+                            <th className="Dates">Dates</th>
+                            <th className="Tools">Tools</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {todos.map(todo => {
+                            if (todo.status === selectedStatus) {
+                                return (<TodoItem
+                                    key={todo.id}
+                                    todo={todo}
+                                />)
+                            }
+                        })}
+                        </tbody>
+                    </table>
+                }
+            </div>
+            {todos && <SummaryTable todos={todos}/>}
         </div>
     );
 };

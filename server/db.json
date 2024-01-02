@@ -4,9 +4,9 @@
       "id": 1,
       "name": "Купити молоко",
       "createdDate": "December 28, 2023",
-      "category": "Random thought",
-      "content": "Молоко",
-      "dates": "",
+      "category": "Task",
+      "content": "Молоко 11/30/2023",
+      "dates": "11/30/2023",
       "status": "active"
     },
     {
@@ -28,15 +28,6 @@
       "status": "active"
     },
     {
-      "id": 4,
-      "name": "Прибратися в квартирі",
-      "createdDate": "December 28, 2023",
-      "category": "Task",
-      "content": "Покласти речі на місце, помити посуд, винести сміття",
-      "dates": "2023-12-28, 2023-12-29",
-      "status": "complete"
-    },
-    {
       "id": 5,
       "name": "Зробити покупки на тиждень",
       "createdDate": "December 28, 2023",
@@ -55,40 +46,31 @@
       "status": "active"
     },
     {
-      "id": 7,
-      "name": "Сходити в кіно",
-      "createdDate": "December 28, 2023",
-      "category": "Random thought",
-      "content": "Новий фільм про супергероїв 12/30/2023",
-      "dates": "12/30/2023",
-      "status": "active"
-    },
-    {
-      "id": 34,
       "name": "Зробити покупки на тиждень",
-      "createdDate": "2023-12-27T19:03:00+02:00",
+      "createdDate": "January 2, 2024",
       "category": "Task",
       "content": "Хліб, овочі, фрукти, м'ясо, молочні продукти",
-      "dates": "2023-12-28, 2023-12-29",
-      "status": "complete"
-    },
-    {
-      "id": 54,
-      "name": "Зустрітися з друзями",
-      "createdDate": "2023-12-27T19:04:00+02:00",
-      "category": "Task",
-      "content": "Кава в кафе",
-      "dates": "2023-12-29, 2023-12-30",
-      "status": "complete"
-    },
-    {
-      "name": "Випити каву",
-      "createdDate": "December 29, 2023",
-      "category": "Random thought",
-      "content": "Уже 9 чашка",
-      "dates": "12/29/2023",
+      "dates": "",
       "status": "active",
-      "id": 67
+      "id": 68
+    },
+    {
+      "name": "Зустрітися з друзями",
+      "createdDate": "January 2, 2024",
+      "category": "Idea",
+      "content": "Кава в кафе",
+      "dates": "",
+      "status": "active",
+      "id": 69
+    },
+    {
+      "name": "Прибратися в квартирі",
+      "createdDate": "January 2, 2024",
+      "category": "Task",
+      "content": "Покласти речі на місце, помити посуд, винести сміття",
+      "dates": "",
+      "status": "complete",
+      "id": 70
     }
   ]
 }

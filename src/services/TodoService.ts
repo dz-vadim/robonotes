@@ -1,18 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {ITodo} from "../models/ITodo";
-const settings = {
-    "url": "https://robonotes-5f3c.restdb.io/rest/todos",
-}
-const headers = {
-    "content-type": "application/json",
-    "x-apikey": "658ee86457af42c3d6bbc9ff",
-    "cache-control": "no-cache"
-}
-export const todoAPI = createApi({
 
+const url = 'https://robonotes-5f3c.restdb.io/rest/todos'
+const headers =
+        { 'cache-control': 'no-cache',
+        'x-apikey': '69f2ef2a30077e770a6c720cd506045527d40' };
+export const todoAPI = createApi({
     tagTypes: ['Todo'],
     reducerPath: 'todoAPI',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
     endpoints: (builder) => ({
         fetchAllTodos: builder.query<ITodo[], number>({
             query: () => ({

@@ -1,46 +1,46 @@
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useState} from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArchive, faPen, faTrash} from "@fortawesome/free-solid-svg-icons";
-import {ITodo} from "../../../models/ITodo";
-import TodoForm from "../../TodoForm";
-import MyModal from "../../MyModal/MyModal";
+import {ITodo} from "../../models/ITodo";
+import TodoForm from "../TodoForm/TodoForm";
+import MyModal from "../MyModal/MyModal";
+import {todoAPI} from "../../services/TodoService";
+import classes from "./NoteToolBar.module.css"
 interface NoteToolBarProps {
     todo: ITodo;
-    update: (todo: ITodo) => void;
-    changeStatus: (todo: ITodo) => void;
-    remove: (todo: ITodo) => void;
 }
-const NoteToolBar: FC<NoteToolBarProps> = ({todo, update, changeStatus, remove}) => {
+const NoteToolBar: FC<NoteToolBarProps> = ({todo}) => {
     const [modal, setModal] = useState(false);
+    const [updateTodo, {}] = todoAPI.useUpdateTodoMutation()
+    const [deleteTodo, {}] = todoAPI.useDeleteTodoMutation()
     const handleRemove = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.stopPropagation()
-        remove(todo)
+        deleteTodo(todo)
     };
     const handleUpdate = (event: React.MouseEvent<HTMLButtonElement>) => {
         console.log("setModal(true)");
         setModal(true)
-        // update({...todo, category, name, content})
     };
 
     const handleChangeStatus = (event: React.MouseEvent<HTMLButtonElement>) => {
         const status = (todo.status === "complete") ? "active" : "complete"
-        update({...todo, status})
+        updateTodo({...todo, status})
     };
 
     return (
-        <div>
+        <div className={classes.nav}>
             <MyModal visible={modal} setVisible={setModal}>
                 <TodoForm todo={todo}/>
             </MyModal>
             {todo.status === "active" &&
-                <button onClick={handleUpdate}>
+                <button className={classes.btn} onClick={handleUpdate}>
                     <FontAwesomeIcon icon={faPen}/>
                 </button>
             }
-            <button onClick={handleChangeStatus}>
+            <button className={classes.btn} onClick={handleChangeStatus}>
                 <FontAwesomeIcon icon={faArchive}/>
             </button>
-            <button onClick={handleRemove}>
+            <button className={classes.btn} onClick={handleRemove}>
                 <FontAwesomeIcon icon={faTrash}/>
             </button>
         </div>
