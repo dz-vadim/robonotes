@@ -1,6 +1,4 @@
-import {WithId} from "mongodb";
-
-export interface ITodo extends WithId<Document>{
+export interface ITodo{
     id: number;
     name: string;
     createdDate: string;

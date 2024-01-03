@@ -34,7 +34,7 @@
       "category": "Idea",
       "content": "Хліб, овочі, фрукти, м'ясо, молочні продукти",
       "dates": "",
-      "status": "active"
+      "status": "complete"
     },
     {
       "id": 6,
@@ -60,7 +60,7 @@
       "category": "Idea",
       "content": "Кава в кафе",
       "dates": "",
-      "status": "active",
+      "status": "complete",
       "id": 69
     },
     {
@@ -69,7 +69,7 @@
       "category": "Task",
       "content": "Покласти речі на місце, помити посуд, винести сміття",
       "dates": "",
-      "status": "complete",
+      "status": "active",
       "id": 70
     }
   ]

@@ -11,6 +11,7 @@ import SummaryTable from "./SummaryTable";
 const TodoContainer: FC = () => {
     const countOfParameters = 0;
     const {data: todos, error, isLoading} = todoAPI.useFetchAllTodosQuery(countOfParameters)
+
     const [modal, setModal] = useState(false);
 
     const [selectedStatus, setSelectedStatus] = useState("active");
@@ -37,7 +38,22 @@ const TodoContainer: FC = () => {
             </MyModal>
             <div className="todo__list">
                 {isLoading && <Loader/>}
-                {error && <h1 className={"error"}>{JSON.stringify(error, null, 2)}</h1>}
+                {error &&
+                    <div>
+                        <h1 className={"error"}>{JSON.stringify(error, null, 2)}</h1>
+                        <h2 className={"error"}>
+                            If you have FETCH_ERROR, try to start json-server:
+                        </h2>
+                        <p>
+                            json-server --watch server/db.json --port 5000
+                        </p>
+                        <pre>
+                            json-server was started to 5000 port. Open http://localhost:5000/todos to view todos
+                            resources it in the browser
+                        </pre>
+                    </div>
+
+                }
                 {todos && <h1 className={"containerTitle"}>{(title + " tasks").toUpperCase()}</h1>}
                 {todos &&
                     <table>

@@ -13,7 +13,6 @@ const TodoItem: FC<TodoItemProps> = ({todo}) => {
     const [modal, setModal] = useState(false);
 
     return (
-        <>
             <tr>
                 <td
                     className="TodoIcon">
@@ -27,12 +26,14 @@ const TodoItem: FC<TodoItemProps> = ({todo}) => {
                 <td className="Content">{todo.content}</td>
                 <td className="Dates">{todo.dates}</td>
                 <td className="Tools"><NoteToolBar todo={todo}/></td>
-
+                <td>
+                    <MyModal visible={modal} setVisible={setModal}>
+                        <TodoForm todo={todo}/>
+                    </MyModal>
+                </td>
             </tr>
-                <MyModal visible={modal} setVisible={setModal}>
-                    <TodoForm todo={todo}/>
-                </MyModal>
-        </>
+
+
     );
 };
 

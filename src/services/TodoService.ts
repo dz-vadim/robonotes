@@ -1,14 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {ITodo} from "../models/ITodo";
-
-const url = 'https://robonotes-5f3c.restdb.io/rest/todos'
-const headers =
-        { 'cache-control': 'no-cache',
-        'x-apikey': '69f2ef2a30077e770a6c720cd506045527d40' };
+const demoUrl = 'https://my-json-server.typicode.com/dz-vadim/db-placeholder/'
+const jsonServerUrl = 'http://localhost:5000/'
 export const todoAPI = createApi({
     tagTypes: ['Todo'],
     reducerPath: 'todoAPI',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
+    baseQuery: fetchBaseQuery({ baseUrl: jsonServerUrl }),
     endpoints: (builder) => ({
         fetchAllTodos: builder.query<ITodo[], number>({
             query: () => ({
@@ -42,3 +39,7 @@ export const todoAPI = createApi({
         }),
     }),
 });
+
+
+
+

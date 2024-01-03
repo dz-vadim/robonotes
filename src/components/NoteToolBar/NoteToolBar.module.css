@@ -1,5 +1,9 @@
 .nav {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 .btn {
     border: none;
@@ -12,8 +16,6 @@
 }
 @media (max-width: 720px) {
     .btn {
-        border: none;
-        background: none;
         padding: 1px;
     }
 }
