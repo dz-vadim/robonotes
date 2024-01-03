@@ -76,7 +76,9 @@ The project structure follows a standard React-Redux TypeScript setup:
 
 ## Screenshots
 
-![Note App](screenshots/note-app.png)
+![Note App](screenshots/note-app1.png)
+![Note App](screenshots/note-app2.png)
+![Note App](screenshots/note-app3.png)
 
 ## Dependencies
 
