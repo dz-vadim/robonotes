@@ -1,7 +1,8 @@
 # React Redux TypeScript Note App
 
 This is a simple Note App built using React.js, Redux (or Redux Toolkit), and TypeScript.
-
+## Static demo page
+https://dz-vadim.github.io/robonotes/
 ## Features
 
 1. **Add, Edit, and Remove Notes:**
