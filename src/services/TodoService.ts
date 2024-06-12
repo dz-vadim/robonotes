@@ -5,7 +5,7 @@ const jsonServerUrl = 'http://localhost:5000/'
 export const todoAPI = createApi({
     tagTypes: ['Todo'],
     reducerPath: 'todoAPI',
-    baseQuery: fetchBaseQuery({ baseUrl: jsonServerUrl }),
+    baseQuery: fetchBaseQuery({ baseUrl: demoUrl }),
     endpoints: (builder) => ({
         fetchAllTodos: builder.query<ITodo[], number>({
             query: () => ({
